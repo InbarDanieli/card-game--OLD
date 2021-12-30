@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import CardGame from '../card-game/CardGame';
+import Game from '../game-page/game/Game';
 import HomePage from '../HomePage/HomePage';
 
 function Router() {
@@ -14,8 +14,8 @@ function Router() {
 
   function getChild() {
     switch (route) {
-      case '/blops':
-        Child = CardGame;
+      case '/game':
+        Child = Game;
         break;
 
       default:
