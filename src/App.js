@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import CardGrid from './components/game-page/card-grid/CardGrid';
+// import Router from './components/Router/Router';
 
 function App() {
-  return (
+let ArrCards = [
+{CardID: "card1"},
+{CardID: "card1"},
+{CardID: "card2"},
+{CardID: "card2"},
+]
+
+ArrCards =  ArrCards.map((Card)=>{return {...Card, key: Math.floor(Math.random() * 1000)}})
+
+return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  {/* <Router/> */}
+  <CardGrid Cards = {ArrCards}/>
     </div>
   );
 }
-
 export default App;
