@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import AboutPage from '../../aboutpage/AboutPage';
 import Game from '../game-page/game/Game';
 import HomePage from '../HomePage/HomePage';
 
@@ -18,7 +19,11 @@ function Router() {
         Child = Game;
         break;
 
-      default:
+        case '/about':
+        Child = AboutPage;
+      break;
+      
+        default:
         Child = HomePage;
     }
   }
