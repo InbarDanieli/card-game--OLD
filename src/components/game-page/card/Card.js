@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Card.css"
 
 function Card(props) {
   const name = {
@@ -12,15 +13,21 @@ function Card(props) {
     card2: 'http://other....'
   }
 
-  function CardChoose(){
+  function CardChoose() {
     props.Onclick(props.CardID)
   }
 
   return (
-    <div style={{border: "3px solid black", width: "400px"}} onClick={CardChoose}>
-      {name[props.CardID]}
-      <hr/>
-     {iamges[props.CardID]}
+    <div className='card' onClick={CardChoose}>
+      <div className='card-inner'>
+        <div className="card-front">   {name[props.CardID]}
+          <hr />
+          {iamges[props.CardID]}
+        </div>
+
+        <div className="card-back">back</div>
+
+      </div>
     </div>
   )
 }
