@@ -2,10 +2,11 @@
 function HomePage() {
   return (
     <div><h1>App</h1>
-      <ul>
-        <li><a href="#/game">Game</a></li>
-        <li><a href="#/">home</a></li>
-      </ul>
+
+        <div><a href="#/game">Game</a></div>
+        <div><a href="#/">Home</a></div>
+        <div><a href="#/about">About</a></div>
+
     </div>
   )
 }
