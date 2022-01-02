@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Card from '../card/Card'
+import './CardGrid.css'
 
 
 function CardGrid(props) {
@@ -28,7 +29,7 @@ function CardGrid(props) {
   CardsArr = CardsArr.map((event) => { return <Card CardID={event.CardID} key={event.key} Onclick={ChooseCard} /> })
   CardsArr.sort((a, b) => a.key - b.key)
 
-  return (<div>{CardsArr}</div>)
+  return (<div className='grid'>{CardsArr}</div>)
 }
 
 export default CardGrid
