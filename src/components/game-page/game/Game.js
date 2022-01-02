@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Border from '../border/Border';
 import CardGrid from '../card-grid/CardGrid';
 
 function Game() {
@@ -14,6 +15,8 @@ function Game() {
     
     return (
         <div>
+          <Border/>
+          <hr/>
           <CardGrid Cards = {ArrCards}/>
         </div>
       );
