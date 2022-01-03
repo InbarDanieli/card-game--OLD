@@ -13,13 +13,13 @@ function Card(props) {
     card2: 'http://other....'
   }
 
-  function CardChoose() {
-    props.Onclick(props.CardID, props.Key)
+  function ClickHendler(){
+    props.Onclick(props.Key, props.CardID)
   }
 
   return (
-    <div className={`card`} onClick={CardChoose}>
-      <div className='card-inner'>
+    <div className={`card`} onClick= {ClickHendler}>
+      <div className={`card-inner`}>
         
         <div className="card-front">
           {name[props.CardID]}

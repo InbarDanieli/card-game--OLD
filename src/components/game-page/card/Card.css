@@ -2,7 +2,7 @@
   width: 250px;
   height: 300px;
   perspective: 1000px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .card-inner {
@@ -10,14 +10,19 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 0.5s;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .card:hover .card-inner {
-  transform: rotateY(180deg);
+  /* transform: scale(1.1); */
+  transform: rotateY(180deg); 
 }
+
+/* .FlipCard{
+   transform: rotateY(180deg); 
+} */
 
 .card-front, .card-back {
   position: absolute;
