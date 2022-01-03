@@ -14,13 +14,15 @@ function Card(props) {
   }
 
   function CardChoose() {
-    props.Onclick(props.CardID)
+    props.Onclick(props.CardID, props.Key)
   }
 
   return (
-    <div className='card' onClick={CardChoose}>
+    <div className={`card`} onClick={CardChoose}>
       <div className='card-inner'>
-        <div className="card-front">   {name[props.CardID]}
+        
+        <div className="card-front">
+          {name[props.CardID]}
           <hr />
           {iamges[props.CardID]}
         </div>
